@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wells of Life Pneuma Church</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="Css/contact.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="images/logo.jpg" alt="Wells of Life Pneuma Church Logo" class="logo-image">
+                <span class="church-name">Wells of Life</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="ministries.html" class="nav-link">Ministries</a></li>
+                <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="sermons.html" class="nav-link">Sermons</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li class="nav-item"><a href="give.html" class="nav-link nav-link-cta">Give</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER/BANNER -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1 class="page-title">Get In Touch</h1>
+            <p class="page-subtitle">We'd love to hear from you — reach out anytime</p>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact">
+        <div class="contact-container">
+            <div class="contact-grid">
+
+                <!-- LEFT: Contact Info -->
+                <div class="contact-info">
+                    <h2 class="contact-info-title">Let's Connect</h2>
+                    <p class="contact-info-text">
+                        Have a question, prayer request, or just want to say hello? Fill out the form or reach us directly using the details below. Our team is here to help.
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <h4 class="contact-detail-label">Location</h4>
+                                <p class="contact-detail-value">Entebbe, Uganda</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <h4 class="contact-detail-label">Phone</h4>
+                                <p class="contact-detail-value">+256 700 000 000</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <h4 class="contact-detail-label">Email</h4>
+                                <p class="contact-detail-value">info@wellsoflifepneuma.org</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <span class="contact-icon">🕒</span>
+                            <div>
+                                <h4 class="contact-detail-label">Office Hours</h4>
+                                <p class="contact-detail-value">Mon–Fri: 9:00 AM – 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h4 class="contact-social-title">Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">Facebook</a>
+                            <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+                            <a href="#" class="social-link" aria-label="YouTube">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2 class="contact-form-title">Send Us a Message</h2>
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name <span class="required">*</span></label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+                                <span class="form-error" id="fullNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                                <span class="form-error" id="emailError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+256 7XX XXX XXX">
+                                <span class="form-error" id="phoneError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="required">*</span></label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>Select a topic</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="prayer">Prayer Request</option>
+                                    <option value="ministries">Ministries & Getting Involved</option>
+                                    <option value="events">Events</option>
+                                    <option value="pastoral">Pastoral Care</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="form-error" id="subjectError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" placeholder="How can we help you?" required></textarea>
+                            <span class="form-error" id="messageError"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary contact-submit-btn">
+                            <span class="btn-text">Send Message</span>
+                        </button>
+
+                        <div class="contact-form-status" id="formStatus"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section class="contact-map">
+        <div class="contact-map-container">
+            <h2 class="contact-map-title">Find Us</h2>
+            <div class="map-embed">
+                <iframe
+                    src="https://www.google.com/maps?q=Entebbe,Uganda&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Wells of Life Pneuma Ministries Location">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will go here later -->
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

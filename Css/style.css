@@ -1,0 +1,2346 @@
+/* ============================================
+   WELLS OF LIFE PNEUMA CHURCH
+   Main Stylesheet
+   ============================================ */
+
+/* ROOT VARIABLES - Color scheme and spacing */
+:root {
+    /* Colors from the logo */
+    --primary-dark: #0A3860;      /* Navy blue */
+    --primary-gold: #D4A574;      /* Gold/amber accent */
+    --text-white: #FFFFFF;        /* White text */
+    --text-dark: #1a1a1a;         /* Dark gray for body text */
+    --text-light: #e8e8e8;        /* Light gray text */
+    --light-bg: #F8F8F8;          /* Light background */
+    
+    /* Typography */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+    
+    /* Spacing */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
+}
+
+/* RESET - Remove default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY - Base styles for entire page */
+body {
+    font-family: var(--font-main);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--text-dark);
+    background-color: var(--text-white);
+}
+
+/* ============================================
+   NAVBAR STYLES
+   ============================================ */
+
+.navbar {
+    background-color: var(--primary-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-medium) var(--spacing-large);
+}
+
+/* Logo Section */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-medium);
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+}
+
+.church-name {
+    color: var(--text-white);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Desktop Navigation Menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-large);
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: var(--spacing-small) 0;
+}
+
+.nav-link:hover {
+    color: var(--primary-gold);
+}
+
+/* Call-to-Action "Give" Button */
+.nav-link-cta {
+    background-color: var(--primary-gold);
+    color: var(--primary-dark);
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.nav-link-cta:hover {
+    color: var(--primary-dark);
+    background-color: #e6c196;
+}
+
+/* Hamburger Menu (Hidden by default) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-white);
+    margin: 5px 0;
+    transition: 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Mobile Styles (screens smaller than 768px) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--primary-dark);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        gap: 0;
+        padding: var(--spacing-large) 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        padding: var(--spacing-medium) 0;
+    }
+
+    .nav-link-cta {
+        margin: var(--spacing-medium);
+    }
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #051f3e 100%);
+    color: var(--text-white);
+    padding: 80px 40px;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative background element - subtle gold glow */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--primary-gold) 0%, transparent 70%);
+    opacity: 0.08;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Layout: side-by-side on desktop */
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* LEFT SIDE - TEXT CONTENT */
+.hero-content {
+    padding: 20px;
+}
+
+.hero-badge {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary-gold);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: var(--text-light);
+    max-width: 500px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-gold);
+    color: var(--primary-dark);
+}
+
+.btn-primary:hover {
+    background-color: #e6c196;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 165, 116, 0.4);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-white);
+    border: 2px solid var(--text-white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-white);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* RIGHT SIDE - IMAGE AREA */
+.hero-visual {
+    padding: 20px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    font-size: 18px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(10, 56, 96, 0.15) 0%, rgba(212, 165, 116, 0.1) 100%);
+    pointer-events: none;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* TABLETS (768px and below) */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 30px;
+        min-height: auto;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .hero-image-container {
+        max-width: 100%;
+        height: 400px;
+    }
+}
+
+/* MOBILE (480px and below) */
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero-container {
+        gap: 30px;
+    }
+
+    .hero-badge {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        margin-bottom: 30px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 14px 24px;
+        font-size: 15px;
+    }
+
+    .hero-image-container {
+        height: 300px;
+    }
+}
+
+
+/* ============================================
+   WELCOME SECTION
+   ============================================ */
+
+.welcome {
+    background-color: var(--light-bg);
+    padding: 80px 40px;
+    position: relative;
+}
+
+.welcome-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Welcome Header */
+.welcome-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.welcome-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.welcome-intro {
+    font-size: 18px;
+    color: var(--text-dark);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Feature Cards Grid */
+.welcome-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.feature-card {
+    background-color: var(--text-white);
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.feature-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.feature-description {
+    font-size: 15px;
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* Welcome CTA */
+.welcome-cta {
+    text-align: center;
+}
+
+.btn-outline {
+    background-color: var(--primary-dark);
+    color: var(--text-white);
+    border: 2px solid var(--primary-dark);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-gold);
+    border-color: var(--primary-gold);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 165, 116, 0.3);
+}
+
+/* ============================================
+   WELCOME SECTION - RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .welcome {
+        padding: 60px 30px;
+    }
+
+    .welcome-title {
+        font-size: 36px;
+    }
+
+    .welcome-intro {
+        font-size: 16px;
+    }
+
+    .welcome-features {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .feature-card {
+        padding: 30px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome {
+        padding: 50px 20px;
+    }
+
+    .welcome-title {
+        font-size: 28px;
+    }
+
+    .welcome-intro {
+        font-size: 15px;
+    }
+
+    .feature-card {
+        padding: 25px 20px;
+    }
+
+    .feature-icon {
+        font-size: 40px;
+    }
+
+    .feature-title {
+        font-size: 18px;
+    }
+
+    .feature-description {
+        font-size: 14px;
+    }
+}
+
+
+/* ============================================
+   SERVICE TIMES SECTION
+   ============================================ */
+
+.service-times {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #051f3e 100%);
+    color: var(--text-white);
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative element - subtle background */
+.service-times::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--primary-gold) 0%, transparent 70%);
+    opacity: 0.05;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.service-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Section Header */
+.service-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.service-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.service-subtitle {
+    font-size: 18px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Times Grid */
+.times-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.time-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 40px 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(212, 165, 116, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.time-card:hover {
+    background-color: rgba(212, 165, 116, 0.15);
+    border-color: var(--primary-gold);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.time-day {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary-gold);
+    margin-bottom: 15px;
+}
+
+.time-hour {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.time-type {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+
+.time-details {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+/* Location Section */
+.service-location {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 165, 116, 0.2);
+    border-radius: 10px;
+    padding: 50px 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+}
+
+.location-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.location-address {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.location-address strong {
+    color: var(--text-white);
+    font-weight: 600;
+}
+
+.location-note {
+    font-size: 14px;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.location-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* ============================================
+   SERVICE TIMES SECTION - RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .service-times {
+        padding: 60px 30px;
+    }
+
+    .service-title {
+        font-size: 36px;
+    }
+
+    .service-subtitle {
+        font-size: 16px;
+    }
+
+    .times-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .time-card {
+        padding: 35px 25px;
+    }
+
+    .time-hour {
+        font-size: 40px;
+    }
+
+    .service-location {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 30px;
+    }
+
+    .location-button {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-times {
+        padding: 50px 20px;
+    }
+
+    .service-title {
+        font-size: 28px;
+    }
+
+    .service-subtitle {
+        font-size: 15px;
+    }
+
+    .time-card {
+        padding: 30px 20px;
+    }
+
+    .time-day {
+        font-size: 12px;
+    }
+
+    .time-hour {
+        font-size: 36px;
+    }
+
+    .time-type {
+        font-size: 16px;
+    }
+
+    .time-details {
+        font-size: 13px;
+    }
+
+    .service-location {
+        padding: 30px 20px;
+    }
+
+    .location-title {
+        font-size: 22px;
+    }
+
+    .location-address {
+        font-size: 15px;
+    }
+
+    .location-note {
+        font-size: 13px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+/* ============================================
+   ABOUT PREVIEW SECTION
+   ============================================ */
+
+.about-preview {
+    background-color: var(--text-white);
+    padding: 80px 40px;
+    position: relative;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* IMAGE SIDE */
+.about-image-side {
+    position: relative;
+}
+
+.about-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    height: 500px;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(10, 56, 96, 0.1) 0%, rgba(212, 165, 116, 0.08) 100%);
+    pointer-events: none;
+}
+
+/* CONTENT SIDE */
+.about-content-side {
+    padding: 20px;
+}
+
+.about-badge {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary-gold);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 30px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.about-text {
+    font-size: 16px;
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Values List */
+.about-values {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 40px 0;
+    padding: 30px 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.value-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary-dark);
+}
+
+.value-icon {
+    font-size: 24px;
+}
+
+.value-text {
+    font-weight: 600;
+}
+
+/* ============================================
+   ABOUT PREVIEW SECTION - RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .about-preview {
+        padding: 60px 30px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-image-wrapper {
+        height: 350px;
+    }
+
+    .about-title {
+        font-size: 36px;
+    }
+
+    .about-text {
+        font-size: 15px;
+    }
+
+    .about-values {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 25px 0;
+    }
+
+    .value-item {
+        flex: 1;
+        min-width: 150px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .value-icon {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-preview {
+        padding: 50px 20px;
+    }
+
+    .about-container {
+        gap: 30px;
+    }
+
+    .about-image-wrapper {
+        height: 280px;
+    }
+
+    .about-badge {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .about-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .about-values {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    .value-item {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .value-icon {
+        font-size: 22px;
+        min-width: 22px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+/* ============================================
+   PAGE HEADER (Used on About, Ministries, Events, etc.)
+   ============================================ */
+
+.page-header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #051f3e 100%);
+    color: var(--text-white);
+    padding: 80px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--primary-gold) 0%, transparent 70%);
+    opacity: 0.08;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.page-header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.page-title {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.page-subtitle {
+    font-size: 20px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Responsive Page Header */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 60px 30px;
+    }
+
+    .page-title {
+        font-size: 42px;
+    }
+
+    .page-subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        padding: 50px 20px;
+    }
+
+    .page-title {
+        font-size: 32px;
+    }
+
+    .page-subtitle {
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   ABOUT FULL PAGE
+   ============================================ */
+
+.about-full {
+    background-color: var(--text-white);
+    padding: 80px 40px;
+    position: relative;
+}
+
+.about-full-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Story Section */
+.about-story {
+    margin-bottom: 80px;
+}
+
+.about-section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+.about-text {
+    font-size: 16px;
+    color: var(--text-dark);
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+/* Mission & Vision Cards */
+.about-mission-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.mission-card,
+.vision-card {
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.mission-card {
+    background: linear-gradient(135deg, rgba(10, 56, 96, 0.05) 0%, rgba(212, 165, 116, 0.05) 100%);
+    border-left: 4px solid var(--primary-dark);
+}
+
+.vision-card {
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.05) 0%, rgba(10, 56, 96, 0.05) 100%);
+    border-left: 4px solid var(--primary-gold);
+}
+
+.mission-title,
+.vision-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.mission-text,
+.vision-text {
+    font-size: 15px;
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+
+/* Core Values Section */
+.about-values-section {
+    margin-bottom: 80px;
+}
+
+.values-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.value-detail {
+    padding: 30px;
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    border-top: 4px solid var(--primary-gold);
+    transition: all 0.3s ease;
+}
+
+.value-detail:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.value-heading {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+
+.value-text {
+    font-size: 14px;
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* Beliefs Section */
+.about-beliefs {
+    margin-bottom: 80px;
+}
+
+.beliefs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.belief-item {
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.belief-item:hover {
+    border-color: var(--primary-gold);
+    box-shadow: 0 8px 20px rgba(212, 165, 116, 0.15);
+}
+
+.belief-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.belief-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+
+.belief-description {
+    font-size: 14px;
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* About CTA Section */
+.about-cta-section {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #051f3e 100%);
+    color: var(--text-white);
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.about-cta-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-heading {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.cta-text {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: var(--text-light);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   ABOUT PAGE - RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .about-full {
+        padding: 60px 30px;
+    }
+
+    .about-section-title {
+        font-size: 32px;
+    }
+
+    .about-text {
+        font-size: 15px;
+    }
+
+    .about-mission-vision {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+
+    .values-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .beliefs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-cta-section {
+        padding: 60px 30px;
+    }
+
+    .cta-heading {
+        font-size: 32px;
+    }
+
+    .cta-text {
+        font-size: 16px;
+    }
+
+    .cta-buttons {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-full {
+        padding: 50px 20px;
+    }
+
+    .about-section-title {
+        font-size: 24px;
+    }
+
+    .about-text {
+        font-size: 14px;
+    }
+
+    .mission-card,
+    .vision-card {
+        padding: 25px 20px;
+    }
+
+    .mission-title,
+    .vision-title {
+        font-size: 18px;
+    }
+
+    .mission-text,
+    .vision-text {
+        font-size: 14px;
+    }
+
+    .value-detail {
+        padding: 20px;
+    }
+
+    .value-heading {
+        font-size: 16px;
+    }
+
+    .value-text {
+        font-size: 13px;
+    }
+
+    .belief-item {
+        padding: 20px;
+    }
+
+    .belief-icon {
+        font-size: 40px;
+    }
+
+    .belief-name {
+        font-size: 16px;
+    }
+
+    .belief-description {
+        font-size: 13px;
+    }
+
+    .about-cta-section {
+        padding: 50px 20px;
+    }
+
+    .cta-heading {
+        font-size: 28px;
+    }
+
+    .cta-text {
+        font-size: 14px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+
+/* ============================================
+   EVENTS PAGE
+   ============================================ */
+
+.events {
+    background-color: var(--text-white);
+    padding: 80px 40px;
+    position: relative;
+}
+
+.events-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Events Intro */
+.events-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.events-section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.events-intro-text {
+    font-size: 16px;
+    color: var(--text-dark);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Events Grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.event-card {
+    background-color: var(--text-white);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.event-card:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    border-color: var(--primary-gold);
+}
+
+/* Event Date Badge */
+.event-date-badge {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #051f3e 100%);
+    color: var(--text-white);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-month {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary-gold);
+    text-transform: uppercase;
+}
+
+.event-day {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 8px;
+}
+
+/* Event Content */
+.event-content {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+
+.event-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.event-time {
+    font-size: 14px;
+    color: var(--primary-gold);
+    font-weight: 600;
+}
+
+.event-description {
+    font-size: 14px;
+    color: var(--text-dark);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.event-link {
+    color: var(--primary-gold);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.event-link:hover {
+    color: var(--primary-dark);
+    transform: translateX(5px);
+}
+
+/* Events Empty State */
+.events-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-dark);
+    font-size: 18px;
+}
+
+/* ============================================
+   CALENDAR SECTION
+   ============================================ */
+
+.events-calendar {
+    background-color: var(--light-bg);
+    padding: 80px 40px;
+    position: relative;
+}
+
+.events-calendar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.events-calendar-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: -0.5px;
+}
+
+.calendar-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.calendar-item {
+    background-color: var(--text-white);
+    padding: 35px 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.calendar-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
+
+.calendar-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.calendar-heading {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.calendar-text {
+    font-size: 14px;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ============================================
+   REGISTER SECTION
+   ============================================ */
+
+.events-register {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #051f3e 100%);
+    color: var(--text-white);
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.events-register-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.register-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.register-text {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: var(--text-light);
+}
+
+/* ============================================
+   EVENTS PAGE - RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .events {
+        padding: 60px 30px;
+    }
+
+    .events-section-title {
+        font-size: 32px;
+    }
+
+    .events-intro-text {
+        font-size: 15px;
+    }
+
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+
+    .event-card {
+        flex-direction: column;
+    }
+
+    .event-date-badge {
+        min-width: 80px;
+    }
+
+    .event-content {
+        padding: 25px;
+    }
+
+    .event-title {
+        font-size: 18px;
+    }
+
+    .event-description {
+        font-size: 13px;
+    }
+
+    .events-calendar {
+        padding: 60px 30px;
+    }
+
+    .events-calendar-title {
+        font-size: 32px;
+    }
+
+    .calendar-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .calendar-item {
+        padding: 25px;
+    }
+
+    .calendar-heading {
+        font-size: 16px;
+    }
+
+    .events-register {
+        padding: 60px 30px;
+    }
+
+    .register-title {
+        font-size: 32px;
+    }
+
+    .register-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .events {
+        padding: 50px 20px;
+    }
+
+    .events-section-title {
+        font-size: 24px;
+    }
+
+    .events-intro-text {
+        font-size: 14px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .event-date-badge {
+        padding: 15px;
+    }
+
+    .event-month {
+        font-size: 10px;
+    }
+
+    .event-day {
+        font-size: 28px;
+        margin-top: 5px;
+    }
+
+    .event-content {
+        padding: 20px;
+    }
+
+    .event-title {
+        font-size: 16px;
+    }
+
+    .event-description {
+        font-size: 12px;
+    }
+
+    .events-calendar {
+        padding: 50px 20px;
+    }
+
+    .events-calendar-title {
+        font-size: 24px;
+    }
+
+    .calendar-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .calendar-item {
+        padding: 20px;
+    }
+
+    .calendar-icon {
+        font-size: 40px;
+    }
+
+    .calendar-heading {
+        font-size: 15px;
+    }
+
+    .calendar-text {
+        font-size: 13px;
+    }
+
+    .events-register {
+        padding: 50px 20px;
+    }
+
+    .register-title {
+        font-size: 28px;
+    }
+
+    .register-text {
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+
+/* ============================================
+   SERMONS PAGE - PROFESSIONAL
+   ============================================ */
+
+.sermons {
+    background-color: var(--text-white);
+    padding: 80px 40px;
+    position: relative;
+}
+
+.sermons-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   FEATURED SERMON
+   ============================================ */
+
+.featured-sermon {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+.featured-sermon-image {
+    position: relative;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.featured-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #051f3e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.featured-placeholder:hover {
+    background: linear-gradient(135deg, #051f3e 0%, var(--primary-dark) 100%);
+}
+
+.play-icon {
+    font-size: 80px;
+    color: var(--primary-gold);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.featured-placeholder:hover .play-icon {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.featured-sermon-content {
+    padding: 20px;
+}
+
+.featured-badge {
+    display: inline-block;
+    background-color: var(--primary-gold);
+    color: var(--primary-dark);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.featured-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    line-height: 1.2;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+.featured-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.meta-item {
+    font-size: 15px;
+    color: var(--text-dark);
+}
+
+.meta-item strong {
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.featured-description {
+    font-size: 16px;
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.featured-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   FILTER SECTION
+   ============================================ */
+
+.sermons-filter {
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-label {
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-size: 15px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: var(--text-white);
+    color: var(--primary-dark);
+    border: 2px solid #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-gold);
+    color: var(--primary-gold);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-dark);
+    color: var(--text-white);
+    border-color: var(--primary-dark);
+}
+
+/* ============================================
+   SERMONS GRID
+   ============================================ */
+
+.sermons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.sermon-card {
+    background-color: var(--text-white);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.sermon-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    transform: translateY(-8px);
+    border-color: var(--primary-gold);
+}
+
+.sermon-card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.sermon-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #051f3e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sermon-card:hover .sermon-placeholder {
+    background: linear-gradient(135deg, #051f3e 0%, var(--primary-dark) 100%);
+}
+
+.sermon-play {
+    font-size: 50px;
+    color: var(--primary-gold);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.sermon-card:hover .sermon-play {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.sermon-duration {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--text-white);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.sermon-card-content {
+    padding: 28px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sermon-series {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--primary-gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.sermon-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.sermon-speaker {
+    font-size: 14px;
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.sermon-date {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.sermon-excerpt {
+    font-size: 14px;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.sermon-btn {
+    background-color: var(--primary-gold);
+    color: var(--primary-dark);
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid var(--primary-gold);
+}
+
+.sermon-btn:hover {
+    background-color: transparent;
+    color: var(--primary-gold);
+}
+
+/* ============================================
+   SUBSCRIBE SECTION
+   ============================================ */
+
+.sermons-subscribe {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #051f3e 100%);
+    color: var(--text-white);
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.subscribe-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.subscribe-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.subscribe-text {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: var(--text-light);
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.subscribe-form input {
+    flex: 1;
+    min-width: 250px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: var(--font-main);
+}
+
+.subscribe-form input::placeholder {
+    color: #999;
+}
+
+/* ============================================
+   SERMONS PAGE - RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .sermons {
+        padding: 60px 30px;
+    }
+
+    .featured-sermon {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .featured-sermon-image {
+        height: 300px;
+    }
+
+    .featured-title {
+        font-size: 32px;
+    }
+
+    .sermons-filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sermons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+
+    .sermon-card-image {
+        height: 180px;
+    }
+
+    .sermon-play {
+        font-size: 40px;
+    }
+
+    .sermon-title {
+        font-size: 18px;
+    }
+
+    .sermons-subscribe {
+        padding: 60px 30px;
+    }
+
+    .subscribe-title {
+        font-size: 32px;
+    }
+
+    .subscribe-text {
+        font-size: 16px;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+    }
+
+    .subscribe-form input {
+        min-width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sermons {
+        padding: 50px 20px;
+    }
+
+    .featured-sermon-image {
+        height: 250px;
+    }
+
+    .featured-title {
+        font-size: 26px;
+    }
+
+    .featured-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .featured-description {
+        font-size: 14px;
+    }
+
+    .featured-actions {
+        flex-direction: column;
+    }
+
+    .featured-actions .btn {
+        width: 100%;
+    }
+
+    .sermons-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sermon-card-image {
+        height: 150px;
+    }
+
+    .sermon-play {
+        font-size: 35px;
+    }
+
+    .sermon-card-content {
+        padding: 20px;
+    }
+
+    .sermon-title {
+        font-size: 16px;
+    }
+
+    .sermon-excerpt {
+        font-size: 13px;
+    }
+
+    .sermons-subscribe {
+        padding: 50px 20px;
+    }
+
+    .subscribe-title {
+        font-size: 26px;
+    }
+
+    .subscribe-text {
+        font-size: 14px;
+    }
+
+    .filter-btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
+
+/* ============================================
+   FADE-IN ANIMATION
+   ============================================ */
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: slideDown 0.3s ease;
+}
+
+/* Form Message Styles */
+.form-message {
+    padding: 15px 20px;
+    margin-top: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    animation: slideDown 0.3s ease;
+}
+
+.form-message-success {
+    background-color: #10b981;
+    color: var(--text-white);
+}
+
+.form-message-error {
+    background-color: #ef4444;
+    color: var(--text-white);
+}

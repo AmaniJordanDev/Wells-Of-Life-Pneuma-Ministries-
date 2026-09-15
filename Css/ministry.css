@@ -1,0 +1,198 @@
+/* ============================================
+   MINISTRIES SECTION (Full Page)
+   ============================================ */
+
+.ministries {
+    background-color: var(--light-bg);
+    padding: 80px 40px;
+    position: relative;
+}
+
+.ministries-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Remove the header (since it's now on the page-header) */
+
+/* Ministries Grid */
+.ministries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.ministry-card {
+    background-color: var(--text-white);
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.ministry-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-8px);
+    border-left-color: var(--primary-gold);
+    background-color: #fafafa;
+}
+
+.ministry-icon {
+    font-size: 56px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.ministry-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.ministry-description {
+    font-size: 15px;
+    color: var(--text-dark);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.ministry-link {
+    color: var(--primary-gold);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.ministry-link:hover {
+    color: var(--primary-dark);
+    transform: translateX(5px);
+}
+
+/* Ministries CTA */
+.ministries-cta {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #051f3e 100%);
+    color: var(--text-white);
+    padding: 60px 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cta-description {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: var(--text-light);
+}
+
+/* ============================================
+   MINISTRIES SECTION - RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .ministries {
+        padding: 60px 30px;
+    }
+
+    .ministries-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .ministry-card {
+        padding: 35px 25px;
+    }
+
+    .ministry-icon {
+        font-size: 48px;
+    }
+
+    .ministry-name {
+        font-size: 18px;
+    }
+
+    .ministry-description {
+        font-size: 14px;
+    }
+
+    .ministries-cta {
+        padding: 50px 30px;
+    }
+
+    .cta-title {
+        font-size: 28px;
+    }
+
+    .cta-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ministries {
+        padding: 50px 20px;
+    }
+
+    .ministries-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .ministry-card {
+        padding: 30px 20px;
+        border-left-width: 0;
+        border-top: 4px solid transparent;
+    }
+
+    .ministry-card:hover {
+        border-left-color: transparent;
+        border-top-color: var(--primary-gold);
+    }
+
+    .ministry-icon {
+        font-size: 44px;
+    }
+
+    .ministry-name {
+        font-size: 17px;
+    }
+
+    .ministry-description {
+        font-size: 13px;
+    }
+
+    .ministries-cta {
+        padding: 40px 20px;
+    }
+
+    .cta-title {
+        font-size: 24px;
+    }
+
+    .cta-description {
+        font-size: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
