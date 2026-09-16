@@ -1,0 +1,423 @@
+/* ============================================
+   GIVE PAGE
+   ============================================ */
+
+/* Intro */
+.give-intro {
+    background-color: var(--text-white);
+    padding: 80px 40px 40px;
+}
+
+.give-intro-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.give-intro-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.give-intro-text {
+    font-size: 17px;
+    color: var(--text-dark);
+    line-height: 1.9;
+}
+
+/* Section title shared */
+.give-section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.give-section-subtitle {
+    font-size: 16px;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================
+   MOBILE MONEY SECTION
+   ============================================ */
+
+.give-methods {
+    background-color: var(--light-bg);
+    padding: 80px 40px;
+}
+
+.give-methods-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.give-card {
+    background-color: var(--text-white);
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    border-top: 5px solid var(--primary-gold);
+    text-align: center;
+}
+
+.give-card-icon {
+    font-size: 56px;
+    margin-bottom: 10px;
+}
+
+.give-card-label {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--primary-gold);
+    margin-bottom: 15px;
+}
+
+.give-number-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.give-number {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    letter-spacing: 1px;
+}
+
+.copy-btn {
+    background-color: var(--primary-dark);
+    color: var(--text-white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.copy-btn:hover {
+    background-color: var(--primary-gold);
+    color: var(--primary-dark);
+}
+
+.copy-btn.copied {
+    background-color: #10b981;
+    color: var(--text-white);
+}
+
+.give-card-name {
+    font-size: 15px;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+}
+
+.give-network-badges {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.network-badge {
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-white);
+}
+
+.network-mtn {
+    background-color: #ffcc00;
+    color: #1a1a1a;
+}
+
+.network-airtel {
+    background-color: #ed1c24;
+}
+
+/* Steps */
+.give-steps {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+.give-steps-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.give-steps-list {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.give-steps-list li {
+    font-size: 15px;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.steps-number {
+    color: var(--primary-dark);
+}
+
+.give-momo-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+}
+
+.give-note {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 15px;
+    color: var(--text-dark);
+}
+
+.give-note a {
+    color: var(--primary-gold);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.give-note a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   GIVING CATEGORIES
+   ============================================ */
+
+.give-categories {
+    background-color: var(--text-white);
+    padding: 80px 40px;
+}
+
+.give-categories-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.category-card {
+    background-color: var(--light-bg);
+    padding: 35px 25px;
+    border-radius: 10px;
+    text-align: center;
+    border-top: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    border-top-color: var(--primary-gold);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.category-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+
+.category-description {
+    font-size: 14px;
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* ============================================
+   SCRIPTURE SECTION
+   ============================================ */
+
+.give-scripture {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #051f3e 100%);
+    color: var(--text-white);
+    padding: 70px 40px;
+    text-align: center;
+}
+
+.give-scripture-container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.scripture-quote {
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.scripture-reference {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--primary-gold);
+    text-transform: uppercase;
+}
+
+/* ============================================
+   CTA SECTION (reuses about-cta-section styles from style.css)
+   ============================================ */
+
+.give-cta-section {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #051f3e 100%);
+    color: var(--text-white);
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.give-cta-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   GIVE PAGE - RESPONSIVE
+   ============================================ */
+
+@media (max-width: 900px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .give-intro {
+        padding: 60px 30px 30px;
+    }
+
+    .give-methods,
+    .give-categories,
+    .give-scripture,
+    .give-cta-section {
+        padding: 60px 30px;
+    }
+
+    .give-card {
+        padding: 35px 25px;
+    }
+
+    .give-number {
+        font-size: 26px;
+    }
+
+    .give-section-title {
+        font-size: 28px;
+    }
+
+    .scripture-quote {
+        font-size: 20px;
+    }
+
+    .cta-heading {
+        font-size: 32px;
+    }
+
+    .cta-buttons {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .give-intro-title {
+        font-size: 26px;
+    }
+
+    .give-intro-text {
+        font-size: 15px;
+    }
+
+    .give-card {
+        padding: 28px 18px;
+    }
+
+    .give-card-icon {
+        font-size: 44px;
+    }
+
+    .give-number {
+        font-size: 22px;
+    }
+
+    .give-number-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .copy-btn {
+        width: 100%;
+    }
+
+    .give-steps {
+        padding: 20px;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scripture-quote {
+        font-size: 17px;
+    }
+
+    .give-cta-section {
+        padding: 50px 20px;
+    }
+
+    .cta-heading {
+        font-size: 26px;
+    }
+
+    .cta-text {
+        font-size: 15px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

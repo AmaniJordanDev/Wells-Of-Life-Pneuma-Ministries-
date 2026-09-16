@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give - Wells of Life Pneuma Church</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Css/give.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="images/logo.jpg" alt="Wells of Life Pneuma Church Logo" class="logo-image">
+                <span class="church-name">Wells of Life</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="ministries.html" class="nav-link">Ministries</a></li>
+                <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="sermons.html" class="nav-link">Sermons</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="give.html" class="nav-link nav-link-cta active">Give</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER/BANNER -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1 class="page-title">Give</h1>
+            <p class="page-subtitle">Your generosity fuels ministry, service, and lives transformed</p>
+        </div>
+    </section>
+
+    <!-- GIVING INTRO -->
+    <section class="give-intro">
+        <div class="give-intro-container">
+            <h2 class="give-intro-title">Why We Give</h2>
+            <p class="give-intro-text">
+                Giving is an act of worship and a tangible expression of faith. Every gift — whether large or small —
+                helps us reveal Christ, nurture the human spirit, and serve our community in Entebbe and beyond.
+                Thank you for partnering with us.
+            </p>
+        </div>
+    </section>
+
+    <!-- MOBILE MONEY GIVING SECTION -->
+    <section class="give-methods">
+        <div class="give-methods-container">
+            <h2 class="give-section-title">Give via Mobile Money</h2>
+            <p class="give-section-subtitle">
+                The fastest and easiest way to give. Simply send your gift to the number below.
+            </p>
+
+            <div class="give-card">
+                <div class="give-card-icon">📱</div>
+
+                <div class="give-card-body">
+                    <h3 class="give-card-label">Send to</h3>
+
+                    <div class="give-number-row">
+                        <span class="give-number" id="momoNumber">+256 791 588 338</span>
+                        <button class="copy-btn" id="copyBtn" type="button">
+                            <span id="copyBtnText">Copy Number</span>
+                        </button>
+                    </div>
+
+                    <p class="give-card-name" id="momoName">Account Name: Wells of Life Pneuma Ministries</p>
+
+                    <div class="give-network-badges">
+                        <span class="network-badge network-mtn">MTN Mobile Money</span>
+                        <span class="network-badge network-airtel">Airtel Money</span>
+                    </div>
+
+                    <div class="give-steps">
+                        <h4 class="give-steps-title">How to Give</h4>
+                        <ol class="give-steps-list">
+                            <li>Dial your mobile money USSD code (e.g. <strong>*165#</strong> for MTN or <strong>*185#</strong> for Airtel).</li>
+                            <li>Select <strong>Send Money</strong>.</li>
+                            <li>Enter the number: <strong><span class="steps-number">+256 791 588 338</span></strong></li>
+                            <li>Enter the amount you'd like to give.</li>
+                            <li>Confirm and complete the transaction with your PIN.</li>
+                        </ol>
+                    </div>
+
+                    <a class="btn btn-primary give-momo-btn" id="momoLink" href="tel:+256791588338">
+                        Give Now via Mobile Money
+                    </a>
+                </div>
+            </div>
+
+            <p class="give-note">
+                Prefer another way to give, or have questions about your gift? <a href="contact.html">Contact us</a> — we're happy to help.
+            </p>
+        </div>
+    </section>
+
+    <!-- GIVING CATEGORIES -->
+    <section class="give-categories">
+        <div class="give-categories-container">
+            <h2 class="give-section-title">Ways to Give</h2>
+            <p class="give-section-subtitle">Choose where your generosity makes an impact</p>
+
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">🙏</div>
+                    <h3 class="category-name">Tithes &amp; Offering</h3>
+                    <p class="category-description">
+                        Support the ongoing life and mission of the church through your regular tithes and offerings.
+                    </p>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">🤲</div>
+                    <h3 class="category-name">Outreach &amp; Missions</h3>
+                    <p class="category-description">
+                        Help fund community outreach, mercy ministry, and mission efforts that bring hope to those in need.
+                    </p>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">🏗️</div>
+                    <h3 class="category-name">Building &amp; Development</h3>
+                    <p class="category-description">
+                        Contribute toward church facilities and infrastructure so we can better serve our growing community.
+                    </p>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">👨‍👩‍👧‍👦</div>
+                    <h3 class="category-name">Family &amp; Youth Ministry</h3>
+                    <p class="category-description">
+                        Invest in the next generation through children's and youth programs that build lasting faith.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPTURE / ENCOURAGEMENT -->
+    <section class="give-scripture">
+        <div class="give-scripture-container">
+            <p class="scripture-quote">
+                "Each of you should give what you have decided in your heart to give, not reluctantly or under
+                compulsion, for God loves a cheerful giver."
+            </p>
+            <p class="scripture-reference">2 Corinthians 9:7</p>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="give-cta-section">
+        <div class="give-cta-container">
+            <h2 class="cta-heading">Have Questions About Giving?</h2>
+            <p class="cta-text">
+                Our team is here to help with anything related to giving, tithing, or supporting a specific ministry.
+            </p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                <a href="about.html" class="btn btn-secondary">Learn About Our Mission</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will go here later -->
+
+    <script src="script.js"></script>
+    <script src="images/give.js"></script>
+</body>
+</html>
